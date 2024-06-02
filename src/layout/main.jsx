@@ -1,9 +1,13 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Navbar from '../global/navbar'
 
 const Main = () => {
   return (
-    <Outlet></Outlet>
+    <div className='container mx-auto'>
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+    </div>
   )
 }
 
