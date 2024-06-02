@@ -1,0 +1,9 @@
+.active {
+  background-color: rgb(17, 158, 214) !important;
+}
+
+.leaflet-container {
+  margin-top: 10px;
+  width: 100%;
+  height: 50vh;
+}
