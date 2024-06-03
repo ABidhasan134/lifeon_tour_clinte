@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 
-import { IoMdPricetags, IoMdTime } from "react-icons/io";
+import {  IoMdTime } from "react-icons/io";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
-import { TbStarsFilled } from "react-icons/tb";
+
 import usePackages from "../hooks/usePackages";
+import { IoLocationOutline } from "react-icons/io5";
 
 const CardDetails = () => {
   const id = useLoaderData();
@@ -57,11 +58,11 @@ const CardDetails = () => {
             <div className="flex md:justify-between justify-evenly">
               <div className="flex items-center md:gap-2 text-xl mx-3">
                 <IoMdTime></IoMdTime>
-                <p>{packagesItem.processing_time} days</p>
+                <p>{packagesItem.trip_duration} </p>
               </div>
               <div className="flex items-center gap-2 text-xl mx-3">
-                <TbStarsFilled></TbStarsFilled>
-                <p>{packagesItem.rating}</p>
+                <IoLocationOutline></IoLocationOutline>
+                <p>{packagesItem.location}</p>
               </div>
             </div>
             {/* price and segment end */}
@@ -71,20 +72,11 @@ const CardDetails = () => {
                 <p>{packagesItem.price}</p>
               </div>
               <div className="flex items-center gap-2 text-xl">
-                <IoMdPricetags></IoMdPricetags>
-                <p>{packagesItem.stock_status}</p>
+                <p>Guided by</p>
+                <p>{packagesItem.guide_name}</p>
               </div>
             </div>
             <hr className="border-1 border-sky-400 w-full mt-6 border-dashed" />
-            <div className="flex md:justify-between justify-evenly">
-              <div className="flex items-center justify-between gap-2 text-xl mx-3">
-                <p>{packagesItem.user_name}</p>
-                <p>{packagesItem.user_email}</p>
-                <button className="btn bg-green-400 hover:bg-green-700 hover:text-white">
-                  Order
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>

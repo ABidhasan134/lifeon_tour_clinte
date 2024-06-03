@@ -3,36 +3,36 @@
         "tour_type": "Eco-tourism",
         "description": "Explore natural environments, support conservation efforts, and observe wildlife in their natural habitats.",
         "popular_destinations": ["St. Martin's Island", "Sundarbans", "Ratargul Swamp Forest"],
-        "image": "https://example.com/images/eco_tourism.jpg"
+        "image": "https://www.worldtrips.com/-/media/Project/TMHCC-MIS/HCCMISdotcom/Demand-Pages/ecotourism-costa-rica-image.jpg?h=350&iar=0&w=674&hash=826D4A4FADEEAF4D4A8959CEB2855678"
     },
     {
         "tour_type": "Adventure Tour",
         "description": "Engage in thrilling activities like trekking, rafting, and rock climbing, perfect for adrenaline seekers.",
         "popular_destinations": ["Bandarban", "Sajek Valley", "Lalakhal"],
-        "image": "https://example.com/images/adventure_tour.jpg"
+        "image": "https://www.newsbharati.com/Encyc/2018/5/31/2_09_24_35_adventure_1_H@@IGHT_435_W@@IDTH_800.jpg"
     },
     {
         "tour_type": "Cultural Tour",
         "description": "Immerse yourself in the rich cultural heritage of Bangladesh, visiting historical sites and experiencing local traditions.",
         "popular_destinations": ["Dhaka", "Sonargaon", "Paharpur"],
-        "image": "https://example.com/images/cultural_tour.jpg"
+        "image": "https://discoverybangladesh.com/images/img-thumb/arts.jpg"
     },
     {
         "tour_type": "Beach Tour",
         "description": "Relax on beautiful sandy beaches, enjoy water sports, and witness stunning sunrises and sunsets.",
         "popular_destinations": ["Cox's Bazar", "Kuakata", "Patenga Beach"],
-        "image": "https://example.com/images/beach_tour.jpg"
+        "image": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/c1/2f/bd.jpg"
     },
     {
         "tour_type": "Wildlife Safari",
         "description": "Get up close with diverse wildlife, including Bengal tigers, elephants, and exotic birds, in their natural habitats.",
         "popular_destinations": ["Sundarbans", "Lawachara National Park", "Teknaf Wildlife Sanctuary"],
-        "image": "https://example.com/images/wildlife_safari.jpg"
+        "image": "https://tfe-bd.sgp1.cdn.digitaloceanspaces.com/posts/15318/mceu-75358503311690965214953.jpg"
     },
     {
         "tour_type": "Photography Tour",
         "description": "Capture the beauty of Bangladesh's landscapes, architecture, and vibrant culture with guided photography tours.",
         "popular_destinations": ["Srimangal", "Sajek Valley", "Puthia Temple Complex"],
-        "image": "https://example.com/images/photography_tour.jpg"
+        "image": "https://offtrackjourneys.com/wp-content/uploads/2021/04/fab.jpeg"
     }
 ]
