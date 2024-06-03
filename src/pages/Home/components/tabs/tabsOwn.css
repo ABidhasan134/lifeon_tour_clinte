@@ -1,0 +1,32 @@
+/* Tabs container */
+.react-tabs__tab-list {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+  }
+  
+  /* Default tab style */
+  .react-tabs__tab {
+    list-style: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: none;
+    margin-right: 2px;
+    background: #f1f1f1;
+    color: #000;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Active tab style */
+  .react-tabs__tab--selected {
+    background: #1781f2;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  /* Hover state */
+  .react-tabs__tab:not(.react-tabs__tab--selected):hover {
+    background: #ddd;
+  }
+  

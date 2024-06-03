@@ -1,0 +1,41 @@
+[
+    {
+        "title": "St. Martin's Island ",
+        "short_description": "Explore the pristine beauty of St. Martin's Island.",
+        "long_description": "Join us on a captivating adventure to St. Martin's Island, where you'll experience the clear blue waters, vibrant coral reefs, and serene beaches. This eco-tourism haven offers a perfect getaway from the hustle and bustle of city life. Engage in snorkeling, beachcombing, and enjoy local seafood delicacies while immersing yourself in the island's tranquil environment.",
+        "trip_start_time": "2024-06-15T08:00:00",
+        "trip_end_time": "2024-06-16T18:00:00",
+        "price": 150,
+        "image": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2021/10/29/saint_martin_rashed_kabir.jpg",
+        "location": "St. Martin's Island, Bangladesh",
+        "facilities": ["Snorkeling gear", "Meals", "Guided tour"],
+        "tour_type": "Eco-tourism",
+        "guide_name": "Ahmed Hossain"
+    },
+    {
+        "title": "Shada Pathor Sylhet Excursion",
+        "short_description": "Discover the white stone beauty of Shada Pathor.",
+        "long_description": "Embark on a one-day excursion to Shada Pathor in Sylhet, a natural wonder known for its white stone landscape and the crystal-clear waters of the Piyain River. This trip offers a perfect blend of adventure and relaxation. Enjoy a boat ride on the river, explore the stunning white stones, and capture the scenic beauty with your camera. Ideal for nature lovers and photographers seeking a unique experience.",
+        "trip_start_time": "2024-07-10T07:00:00",
+        "trip_end_time": "2024-07-10T19:00:00",
+        "price": 50,
+        "image": "https://img.truvvle.com/?src=aHR0cHM6Ly9pbWcudHJhdmVsZmVlZC5pby9yZWhhbjEyJTJGMjAxOTEyMDlUMTExNzA4NjAxWi1JTUdfMjAxOTEyMDlfMTAzOTE0LmpwZw&width=3840",
+        "location": "Shada Pathor, Sylhet, Bangladesh",
+        "facilities": ["Boat ride", "Lunch", "Photography spots"],
+        "tour_type": "Day trip",
+        "guide_name": "Rashidul Karim"
+    },
+    {
+        "title": "Kuakata Beach Sunset Tour",
+        "short_description": "Experience the sunset at Kuakata Beach.",
+        "long_description": "Join our Kuakata Beach Sunset Tour to witness the mesmerizing views of both sunrise and sunset over the Bay of Bengal. Known as the 'Daughter of the Sea,' Kuakata offers a serene escape with its wide sandy beaches and gentle waves. This tour includes a visit to local markets, a boat ride, and ample time to relax on the beach. Perfect for those looking to unwind and capture the beauty of nature.",
+        "trip_start_time": "2024-08-05T05:00:00",
+        "trip_end_time": "2024-08-05T21:00:00",
+        "price": 70,
+        "image": "https://cosmosgroup.sgp1.digitaloceanspaces.com/news/details/1327662_Kuakata%20sea%20beach%20Sunset%20views.jpg",
+        "location": "Kuakata Beach, Patuakhali, Bangladesh",
+        "facilities": ["Boat ride", "Local market visit", "Meals"],
+        "tour_type": "Beach tour",
+        "guide_name": "Fatima Rahman"
+    }
+]
