@@ -7,7 +7,6 @@ import Story from './components/story/story'
 const Home = () => {
   return (
     <div>
-      hi
       <Bannar></Bannar>
       <TabsOwn></TabsOwn>
       <TourType></TourType>

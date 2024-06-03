@@ -5,8 +5,8 @@ const OverViwe = ({item}) => {
   return (
     
     <div className='p-6 m-2'>
-        <div className='grid justify-center text-center'>
-            <h1 className='font-bold text-3xl'>{item.name}</h1>
+        <div className='grid justify-center text-center mb-6'>
+            <h1 className='font-bold text-3xl '>{item.name}</h1>
             <p>{item.description}</p>
             <p>{item.famous_reason}</p>    
         </div>

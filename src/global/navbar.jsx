@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {  Link, NavLink } from 'react-router-dom';
 import "./style.css"
+import { AuthContext } from '../context/authProvider';
 const Navbar = () => {
+  const {user}=useContext(AuthContext);
     const links = (
         <>
          <li ><NavLink to="/">Home</NavLink></li>
@@ -10,6 +12,16 @@ const Navbar = () => {
          <li ><NavLink to="/aboutsus">Abouts us</NavLink></li>
          <li ><NavLink to="/contactus">contact us</NavLink></li>
          
+        </>
+      );
+      const loginRegister = (
+        <>
+          <li>
+            <NavLink to="/login">Log In</NavLink>
+          </li>
+          <li>
+            <NavLink to="/register">Register</NavLink>
+          </li>
         </>
       );
   return (
@@ -30,9 +42,29 @@ const Navbar = () => {
       {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <Link to="/register">Register</Link>
-  </div>
+  {user ? (
+        <ul className="menu menu-horizontal px-1 navbar-end">
+          
+          <div className="dropdown dropdown-bottom">
+            <div tabIndex={0} role="button" className="m-1"><img className=" w-12 rounded-full" src={user.photoURL} alt="User Profile" /></div>
+            <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52"> 
+              <Link><button className='btn w-full' disabled>{user.displayName}</button></Link>
+              <Link><button className='btn w-full' disabled>{user.email}</button></Link>
+              <Link><button className='btn w-full'>Dashbored</button></Link>
+            </ul>
+          </div>
+          <li>
+            <NavLink to="/logout" >
+              Log out
+            </NavLink>
+          </li>
+          {/* <p>{user.displayName}</p> */}
+        </ul>
+      ) : (
+        <ul className="menu menu-horizontal px-1 navbar-end">
+          {loginRegister}
+        </ul>
+      )}
 </div>
   )
 }
