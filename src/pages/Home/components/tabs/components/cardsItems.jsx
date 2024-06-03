@@ -39,7 +39,7 @@ const CardsItems = ({ ourPackage }) => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2 text-xl">
              <FcMoneyTransfer></FcMoneyTransfer>
-              <p>{ourPackage.price}</p>
+              <p>{ourPackage.price} USD</p>
             </div>
             <div className="flex items-center gap-2 text-xl">
               <TbCategory></TbCategory>
