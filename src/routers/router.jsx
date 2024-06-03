@@ -4,6 +4,8 @@ import Home from "../pages/Home/home";
 import CardDetails from "../shared/cardDitails";
 import ViewCetagory from "../shared/viewCetagory";
 import Error from "../error/error";
+import Register from "../register/register";
+import Successful from "../register/successful";
 
   const router = createBrowserRouter([
     {
@@ -24,6 +26,14 @@ import Error from "../error/error";
           path: '/alltourdetail/:id',
           element: <ViewCetagory></ViewCetagory>,
           loader: (({params})=>params.id)
+        },
+        {
+          path: "/register",
+          element: <Register></Register>
+        },
+        {
+          path: "/successregester",
+          element: <Successful></Successful>
         }
       ]
     },
