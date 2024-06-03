@@ -6,6 +6,7 @@ import './tabsOwn.css'
 import axios from 'axios';
 import OverViwe from './components/overViwe';
 import useVideos from '../../../../hooks/useVideos';
+import OurPackages from './components/ourPackages';
 
 
 const TabsOwn = () => {
@@ -20,7 +21,7 @@ const TabsOwn = () => {
       <Tab>Meet our Tour Guides</Tab>
     </TabList>
     <TabPanel>{videos.map((item)=>{return <OverViwe  item={item} key={item._id}></OverViwe>})}</TabPanel>
-    <TabPanel>items II</TabPanel>
+    <TabPanel><OurPackages></OurPackages></TabPanel>
   </Tabs>
   )
 }
