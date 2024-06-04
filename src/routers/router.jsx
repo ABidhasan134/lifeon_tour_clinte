@@ -6,6 +6,8 @@ import ViewCetagory from "../shared/viewCetagory";
 import Error from "../error/error";
 import Register from "../register/register";
 import Successful from "../register/successful";
+import LogOut from '../log/logOut'
+import LogIn from '../log/LogIn';
 
   const router = createBrowserRouter([
     {
@@ -34,6 +36,15 @@ import Successful from "../register/successful";
         {
           path: "/successregester",
           element: <Successful></Successful>
+        },
+        {
+          path: "/logout",
+          element: <LogOut></LogOut>
+        },
+        {
+          path: '/login',
+          element: <LogIn></LogIn>
+
         }
       ]
     },

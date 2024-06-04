@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import React, { createContext, useEffect, useState } from 'react'
 import { auth } from '../firebase/firebase'
 
@@ -13,6 +13,15 @@ const AuthProvider = ({children}) => {
         // when user is createing loading should be true 
       }
 
+      const logInuser = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
+      };
+    
+      const logOut = () => {
+        setLoading(true);
+        return signOut(auth).then(() => setLoading(false));
+      };
 
       useEffect(()=>{
         // obgarber for user and whice user is use this 
@@ -28,7 +37,7 @@ const AuthProvider = ({children}) => {
           unsubscribe();
         }
       },[]);
-    const authInfo={user,setUser,loading,setLoading,createUser}
+    const authInfo={user,setUser,loading,setLoading,createUser,logInuser,logOut}
   return (
     <AuthContext.Provider value={authInfo}>
         {children}
