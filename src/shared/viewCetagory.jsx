@@ -3,6 +3,12 @@ import { useLoaderData } from 'react-router-dom';
 
 import { useQuery } from '@tanstack/react-query';
 import useAxiousPublic from '../hooks/useAxiousPublic';
+import ViewGalery from '../pages/Home/components/tourType/components/viewGalery';
+import AboutTour from '../pages/Home/components/tourType/components/aboutTour';
+import TitleandSubtitels from './titleandSubtitels';
+import TourPlan from '../pages/Home/components/tourType/components/tourPlan';
+import OurGurids from '../pages/Home/components/tabs/components/ourGurids'
+import BookingFrom from './bookingFrom';
 
 const ViewCategory = () => {
     const id = useLoaderData();
@@ -24,27 +30,18 @@ const ViewCategory = () => {
     if (isError) {
         return <div>Error: {error.message}</div>;
     }
+    // console.log(singleDetails);
 
     return (
-        <div className="hero min-h-[400px] bg-gray-600 m-4 rounded-md">
-            <div className="hero-content flex-col lg:flex-row items-center">
-                <img src={singleDetails.image} className="max-w-sm rounded-lg shadow-2xl" alt="Tour" />
-                <div>
-                    <h1 className="text-5xl font-bold">{singleDetails.tour_type}</h1>
-                    <p className="py-6">{singleDetails.description}</p>
-                    <h1 className="text-2xl text-sky-500 font-bold my-3">Locations of trip</h1>
-                    <div className="flex md:gap-2 gap-1 justify-evenly">
-                        {singleDetails.popular_destinations?.map((destination, index) => (
-                            <p
-                                key={index}
-                                className="animate__animated animate__bounce sm:shadow-md shadow-sm sm:p-4 p-1 bg-gray-800 rounded-3xl text-sky-600"
-                            >
-                                {destination}
-                            </p>
-                        ))}
-                    </div>
-                </div>
-            </div>
+        <div>
+            <ViewGalery img={singleDetails.images}></ViewGalery>
+            <AboutTour singleDetails={singleDetails}></AboutTour>
+            <TitleandSubtitels heading="Our tour Plan" subtitle="you would love to read what we enjoy in day"></TitleandSubtitels>
+            <TourPlan days={singleDetails.days_activity}></TourPlan>
+            <TitleandSubtitels heading="Our Heros" subtitle="you would love to meet our hero. Choose your tour patnare"></TitleandSubtitels>
+            <OurGurids></OurGurids>
+            <TitleandSubtitels heading="Booking Now" subtitle="To booking for this pacage your have to filup this from"></TitleandSubtitels>
+            <BookingFrom></BookingFrom>
         </div>
     );
 }

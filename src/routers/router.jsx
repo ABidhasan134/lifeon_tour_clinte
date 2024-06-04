@@ -9,7 +9,7 @@ import Successful from "../register/successful";
 import LogOut from '../log/logOut'
 import LogIn from '../log/LogIn';
 import PriveteRoute from "./priveteRoute";
-import GuidsDitails from "../shared/guidsDitails";
+import GuidsDitails from "../shared/guidsProfile";
 
   const router = createBrowserRouter([
     {
