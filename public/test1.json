@@ -1,0 +1,65 @@
+[
+    {
+      "name": "Hasan Mia",
+      "experience": 5,
+      "specialties": [
+        "History",
+        "Art & Culture"
+      ],
+      "languages": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "city": "shylet",
+      "availability": "Flexible",
+      "average_rating": 4.8,
+      "price_range": "$$ (Moderate)",
+      "bio": "Passionate historian with a love for sharing the hidden gems of Paris. Fluent in English, French, and Spanish.",
+      "image_url": "https://example.com/images/alice_profile.jpg",
+      "email": "alice.miller@tours.com",
+      "facebook": "https://www.facebook.com/alice.miller.tours"
+    },
+    {
+      "name": "Dilruba Mohona ",
+      "experience": 10,
+      "specialties": [
+        "Adventure",
+        "Nature"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "city": "Dhaka, Bangladesh",
+      "availability": "Weekends only",
+      "average_rating": 4.9,
+      "price_range": "$$$ (Premium)",
+      "bio": "Experienced adventurer offering unique nature tours in and around Tokyo. Bilingual in English and Japanese.",
+      "image_url": "https://example.com/images/kenzo_profile.jpg",
+      "email": "kenzo.tanaka@tours.com",
+      "facebook": "https://www.facebook.com/kenzo.tanaka.tours"
+    },
+    {
+      "name": "Abid hasan",
+      "experience": 3,
+      "specialties": [
+        "Food & Wine",
+        "Family tours"
+      ],
+      "languages": [
+        "English",
+        "Bangla",
+        "Spanish"
+      ],
+      "city": "Dhaka,Bangladesh",
+      "availability": "Weekdays only",
+      "average_rating": 4.7,
+      "price_range": "$ (Budget-friendly)",
+      "bio": "Enthusiastic guide specializing in delicious food tours and family-friendly activities in Rome. Speaks English, Italian, and Spanish.",
+      "image_url": "https://example.com/images/isabella_profile.jpg",
+      "email": "isabella.rodriguez@tours.com",
+      "facebook": "https://www.facebook.com/isabella.rodriguez.tours"
+    }
+  ]
+  

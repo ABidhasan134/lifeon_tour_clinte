@@ -7,6 +7,7 @@ import axios from 'axios';
 import OverViwe from './components/overViwe';
 import useVideos from '../../../../hooks/useVideos';
 import OurPackages from './components/ourPackages';
+import OurGurids from './components/ourGurids';
 
 
 const TabsOwn = () => {
@@ -22,6 +23,7 @@ const TabsOwn = () => {
     </TabList>
     <TabPanel>{videos.map((item)=>{return <OverViwe  item={item} key={item._id}></OverViwe>})}</TabPanel>
     <TabPanel><OurPackages></OurPackages></TabPanel>
+    <TabPanel><OurGurids></OurGurids></TabPanel>
   </Tabs>
   )
 }

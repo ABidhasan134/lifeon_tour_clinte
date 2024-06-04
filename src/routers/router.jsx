@@ -8,6 +8,8 @@ import Register from "../register/register";
 import Successful from "../register/successful";
 import LogOut from '../log/logOut'
 import LogIn from '../log/LogIn';
+import PriveteRoute from "./priveteRoute";
+import GuidsDitails from "../shared/guidsDitails";
 
   const router = createBrowserRouter([
     {
@@ -21,12 +23,12 @@ import LogIn from '../log/LogIn';
         },
         {
           path: "/details/:id",
-          element: <CardDetails></CardDetails>,
+          element: <PriveteRoute><CardDetails></CardDetails></PriveteRoute>,
           loader: (({params})=>params.id)
         },
         {
           path: '/alltourdetail/:id',
-          element: <ViewCetagory></ViewCetagory>,
+          element: <PriveteRoute><ViewCetagory></ViewCetagory></PriveteRoute> ,
           loader: (({params})=>params.id)
         },
         {
@@ -45,6 +47,11 @@ import LogIn from '../log/LogIn';
           path: '/login',
           element: <LogIn></LogIn>
 
+        },
+        {
+          path: "/guideDetails/:id",
+          element: <GuidsDitails></GuidsDitails>,
+          loader: ({params})=>params.id
         }
       ]
     },
