@@ -3,12 +3,15 @@ import { useForm } from 'react-hook-form';
 import { AuthContext } from '../context/authProvider';
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
+import useAxiousSequer from '../hooks/useAxiousSequer';
+import Swal from 'sweetalert2'
 
-const BookingForm = () => {
+const BookingForm = ({singleDetails}) => {
     const [startDate, setStartDate] = useState(new Date());
     const { user } = useContext(AuthContext);
-    const { register, handleSubmit, setValue, formState: { errors } } = useForm();
-
+    const { register, handleSubmit, setValue,reset, formState: { errors } } = useForm();
+    const axiosSequer=useAxiousSequer();
+    console.log(singleDetails)
     useEffect(() => {
         if (user) {
             setValue('tourist_email', user.email);
@@ -23,9 +26,35 @@ const BookingForm = () => {
             tourist_email: user.email,
             tourist_name: user.displayName,
             tourist_image: user.photoURL,
-            booking_date: startDate
+            booking_date: startDate,
+            package_type: singleDetails.tour_type,
         };
         // console.log(completeData);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Your booking will confirm",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Book Now"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSequer.post('/mybooking', completeData)
+                    .then((res) => {
+                        console.log(res.data);
+                        if (res.data.insertedId) {
+                            Swal.fire({
+                                title: "Booking successfully",
+                                text: "Your booking has been confirmed.",
+                                icon: "success"
+                            });
+                            reset();
+                        }
+                    });
+            }
+        });
+        
     };
 
     return (

@@ -11,6 +11,7 @@ import LogIn from '../log/LogIn';
 import PriveteRoute from "./priveteRoute";
 import GuidsDitails from "../shared/guidsProfile";
 import Allstroy from "../pages/Home/components/story/allstory.jsx/allstroy";
+import AllPackage from "../pages/Home/components/tabs/components/all package/allPackage";
 
   const router = createBrowserRouter([
     {
@@ -57,6 +58,10 @@ import Allstroy from "../pages/Home/components/story/allstory.jsx/allstroy";
         {
           path: "/allstory",
           element: <Allstroy></Allstroy>
+        },
+        {
+          path: "allpackage",
+          element: <AllPackage></AllPackage>
         }
       ]
     },

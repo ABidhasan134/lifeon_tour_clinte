@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom'
 import useAxiousPublic from '../hooks/useAxiousPublic';
 import { useQuery } from '@tanstack/react-query';
 import Bakground from '../../public/img/cool-background.png'
+import Inputbox from '../pages/Home/components/tabs/components/ourgudis/inputbox';
 
 const GuidsDitails = () => {
     const id=useLoaderData();
@@ -68,6 +69,7 @@ const GuidsDitails = () => {
              
             </div>
         
+<Inputbox guide={guide}></Inputbox>
     </div>
 
     <img src={guide.image_url}  alt="-----gudedImg------" className="max-w-xl rounded-lg " />

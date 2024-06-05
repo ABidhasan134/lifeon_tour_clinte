@@ -41,7 +41,7 @@ const ViewCategory = () => {
             <TitleandSubtitels heading="Our Heros" subtitle="you would love to meet our hero. Choose your tour patnare"></TitleandSubtitels>
             <OurGurids></OurGurids>
             <TitleandSubtitels heading="Booking Now" subtitle="To booking for this pacage your have to filup this from"></TitleandSubtitels>
-            <BookingFrom></BookingFrom>
+            <BookingFrom singleDetails={singleDetails}></BookingFrom>
         </div>
     );
 }

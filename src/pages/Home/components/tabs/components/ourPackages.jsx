@@ -1,6 +1,7 @@
 import React from 'react'
 import usePackages from '../../../../../hooks/usePackages'
 import CardsItems from './cardsItems';
+import { Link } from 'react-router-dom';
 
 const OurPackages = () => {
     const [packages]=usePackages();
@@ -12,6 +13,7 @@ const OurPackages = () => {
       {packages.slice(0, 6).map((item) => {
         return <CardsItems ourPackage={item} key={item._id}></CardsItems>;
       })}
+      <Link to='/allpackage'><button className='btn btn-outline mb-2'>All package</button></Link>
     </div>
   )
 }
