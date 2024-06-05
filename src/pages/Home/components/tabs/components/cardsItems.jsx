@@ -7,6 +7,8 @@ import { CiLogout } from "react-icons/ci";
 import { FcMoneyTransfer } from "react-icons/fc";
 import { TbCategory } from "react-icons/tb";
 import { CiHeart } from "react-icons/ci";
+import Toggel from "./toggel";
+import ToggolLove from "../../../../../shared/toggolLove";
 
 const CardsItems = ({ ourPackage }) => {
 
@@ -20,7 +22,11 @@ const CardsItems = ({ ourPackage }) => {
         </figure>
 
         <div className="card-body">
-          <h2 className="card-title items-center">{ourPackage.title} <button className="text-2xl"><CiHeart></CiHeart></button></h2>
+          <h2 className="card-title items-center">{ourPackage.title} 
+          {/* wish list button  */}
+          {/* <Toggel></Toggel> */}
+          <ToggolLove ourPackage={ourPackage}></ToggolLove>
+          </h2>
           <p>{ourPackage.short_description}</p>
           <hr className="border-1 border-sky-400 w-full mt-6 border-dashed" />
           {/* location and segment */}
