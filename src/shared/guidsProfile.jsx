@@ -24,7 +24,7 @@ const GuidsDitails = () => {
     if (isError) {
         return <div>Error: {error.message}</div>;
     }
-    console.log(guide);
+    // console.log(guide);
   return (
   
   <div className="hero mt-2 min-h-[80vh] flex justify-center  gap-10" style={{backgroundImage: `url(${Bakground})`}}>

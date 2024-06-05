@@ -10,6 +10,7 @@ import LogOut from '../log/logOut'
 import LogIn from '../log/LogIn';
 import PriveteRoute from "./priveteRoute";
 import GuidsDitails from "../shared/guidsProfile";
+import Allstroy from "../pages/Home/components/story/allstory.jsx/allstroy";
 
   const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ import GuidsDitails from "../shared/guidsProfile";
           path: "/guideDetails/:id",
           element: <GuidsDitails></GuidsDitails>,
           loader: ({params})=>params.id
+        },
+        {
+          path: "/allstory",
+          element: <Allstroy></Allstroy>
         }
       ]
     },

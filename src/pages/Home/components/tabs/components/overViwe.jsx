@@ -1,7 +1,7 @@
 import React from 'react'
 
 const OverViwe = ({item}) => {
-    console.log(item);
+    // console.log(item);
   return (
     
     <div className='p-6 m-2'>

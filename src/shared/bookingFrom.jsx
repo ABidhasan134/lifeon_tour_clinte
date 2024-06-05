@@ -25,7 +25,7 @@ const BookingForm = () => {
             tourist_image: user.photoURL,
             booking_date: startDate
         };
-        console.log(completeData);
+        // console.log(completeData);
     };
 
     return (
