@@ -1,8 +1,10 @@
 
 import { useQuery } from '@tanstack/react-query';
 import useAxiousPublic from './useAxiousPublic';
+
 const useStory = () => {
     const axiousPublic=useAxiousPublic();
+
     const {data: storys=[],isLoading,refetch}=useQuery({
         queryKey: 'storys',
         queryFn: async()=>{

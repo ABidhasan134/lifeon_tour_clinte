@@ -33,7 +33,7 @@ const AuthProvider = ({children}) => {
           console.log("Inside the useEffect", currentUser);
           if(currentUser){
             const userEamil={email: currentUser.email};
-            axiousPublic.post('jwt',userEamil)
+            axiousPublic.post('/jwt',userEamil)
             .then((res)=>{
               localStorage.setItem("access_token",res.data)
             })
