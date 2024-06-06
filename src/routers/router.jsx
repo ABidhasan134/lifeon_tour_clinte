@@ -52,7 +52,7 @@ import AllPackage from "../pages/Home/components/tabs/components/all package/all
         },
         {
           path: "/guideDetails/:id",
-          element: <GuidsDitails></GuidsDitails>,
+          element: <PriveteRoute><GuidsDitails></GuidsDitails></PriveteRoute>,
           loader: ({params})=>params.id
         },
         {

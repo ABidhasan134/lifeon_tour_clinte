@@ -6,17 +6,20 @@ import DatePicker from "react-datepicker";
 import useAxiousSequer from '../hooks/useAxiousSequer';
 import Swal from 'sweetalert2'
 
+
 const BookingForm = ({singleDetails}) => {
     const [startDate, setStartDate] = useState(new Date());
+  
     const { user } = useContext(AuthContext);
     const { register, handleSubmit, setValue,reset, formState: { errors } } = useForm();
     const axiosSequer=useAxiousSequer();
-    console.log(singleDetails)
+
     useEffect(() => {
         if (user) {
             setValue('tourist_email', user.email);
             setValue('tourist_name', user.displayName);
             setValue('tourist_image', user.photoURL);
+            setValue("tour_price",singleDetails.price);
         }
     }, [user, setValue]);
 
@@ -28,6 +31,7 @@ const BookingForm = ({singleDetails}) => {
             tourist_image: user.photoURL,
             booking_date: startDate,
             package_type: singleDetails.tour_type,
+            tour_price: singleDetails.price
         };
         // console.log(completeData);
         Swal.fire({
@@ -130,8 +134,9 @@ const BookingForm = ({singleDetails}) => {
                         <input
                             {...register("tour_price", { required: true })}
                             type="number"
-                            placeholder="Price"
+                            placeholder={singleDetails.price}
                             className="input input-bordered"
+                            disabled
                         />
                         {errors.tour_price && <span className="text-red-500">Price is required</span>}
                     </div>

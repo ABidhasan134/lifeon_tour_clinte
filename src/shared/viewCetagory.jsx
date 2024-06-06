@@ -9,10 +9,12 @@ import TitleandSubtitels from './titleandSubtitels';
 import TourPlan from '../pages/Home/components/tourType/components/tourPlan';
 import OurGurids from '../pages/Home/components/tabs/components/ourGurids'
 import BookingFrom from './bookingFrom';
+import useGuide from '../hooks/useGuide';
 
 const ViewCategory = () => {
     const id = useLoaderData();
     const axiosPublic = useAxiousPublic();
+
 
     const { data: singleDetails = {}, isLoading, isError, error } = useQuery({
         queryKey: ['packages', id],
