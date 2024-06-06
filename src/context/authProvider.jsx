@@ -1,9 +1,11 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import React, { createContext, useEffect, useState } from 'react'
 import { auth } from '../firebase/firebase'
+import useAxiousPublic from '../hooks/useAxiousPublic'
 
 export const AuthContext=createContext()
 const AuthProvider = ({children}) => {
+  const axiousPublic=useAxiousPublic();
     const [user,setUser]=useState(null)
     const [loading, setLoading]=useState(true)
     const createUser=(email,password)=>{
@@ -29,6 +31,16 @@ const AuthProvider = ({children}) => {
           // get currentUser in user state
           setUser(currentUser);
           console.log("Inside the useEffect", currentUser);
+          if(currentUser){
+            const userEamil={email: currentUser.email};
+            axiousPublic.post('jwt',userEamil)
+            .then((res)=>{
+              localStorage.setItem("access_token",res.data)
+            })
+          }
+          else{
+            localStorage.removeItem("access_token")
+          }
           // when user is loaded then loding is false
           setLoading(false);
         })
