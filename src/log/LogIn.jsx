@@ -8,6 +8,7 @@ import { FacebookAuthProvider, GithubAuthProvider,GoogleAuthProvider,signInWithP
 import { FaFacebook, FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { auth } from "../firebase/firebase";
+import useAxiousPublic from "../hooks/useAxiousPublic";
 
 
 
@@ -20,6 +21,7 @@ const LogIn = () => {
   const logLocation=useLocation()
   const FacebookProvider = new FacebookAuthProvider();
   // console.log(logLocation);
+  const axiousPublic=useAxiousPublic();
 
   // from submit function
   const handelLogInSubmit = (e) => {
@@ -48,26 +50,41 @@ const LogIn = () => {
       });
       e.target.reset();
   };
+  
+  //add scope of github
+  gitHubProvider.addScope('user:email'); 
 
   // GitHub login function 
-const githublogInHandel = () => {
-  signInWithPopup(auth, gitHubProvider)
-    .then((result) => {
-      // The signed-in user info.
-      const user = result.user;
-      // toast("GitHub login successful");
-      toast("Login successful with Google");
-      
-      setTimeout(() => {
-        navigate(logLocation?.state?logLocation.state:"/");
-      }, 3000);
-    })
-    .catch((error) => {
-      // Handle GitHub login errors
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // toast.error(`GitHub login failed: ${errorMessage}`);
-    });
+  const handleGithubLogin = () => {
+    signInWithPopup(auth, gitHubProvider)
+      .then((result) => {
+        const user = result.user;
+        const additionalUserInfo = result.additionalUserInfo;
+        let email = user.email;
+
+        // Check if email is available in the user object
+        if (!email && additionalUserInfo) {
+          const profile = additionalUserInfo.profile;
+          if (profile && profile.email) {
+            email = profile.email;
+          }
+        }
+
+        const userInfo = { user_name: user.displayName, user_email: email || "example@gmail.com", role: 'user' };
+
+        toast("Login successful with GitHub");
+        axiousPublic.put(`/users/${email}`, userInfo)
+          .then((res) => {
+            console.log(res.data);
+          });
+        setTimeout(() => {
+          navigate(logLocation?.state ? logLocation.state : "/");
+        }, 3000);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        toast("GitHub login failed: " + errorMessage);
+      });
   };
 
   // google login function
@@ -77,7 +94,12 @@ const githublogInHandel = () => {
         const user = result.user;
         // setPerson(user);
         toast("Login successful with Google");
-        // console.log(user);
+        console.log(user);
+        const userInfo = { user_name: user.displayName, user_email: user.email, role: 'user' };
+        axiousPublic.put(`/users/${user.email}`, userInfo)
+          .then((res) => {
+            console.log(res.data);
+          });
         setTimeout(() => {
           navigate(logLocation?.state?logLocation.state:"/");
         }, 3000);
@@ -140,7 +162,7 @@ const githublogInHandel = () => {
                   <ToastContainer></ToastContainer>
               <div>
                 <div className="flex w-full  p-6 gap-5">
-                  <button className="my-2 btn btn-outline w-[45%] sm:w-[48%] ml-2 mr-2" onClick={githublogInHandel}>
+                  <button className="my-2 btn btn-outline w-[45%] sm:w-[48%] ml-2 mr-2" onClick={handleGithubLogin}>
                     <span className="text-2xl"><FaGithub></FaGithub></span>git Hub logIn</button>
                   <button className="my-2 btn bg-transparent bottom-2 border-green-800 w-[45%] sm:w-[48%] ml-2 mr-2 hover:bg-green-800 hover:text-white" onClick={handelGoogleSubmit}>
                   <span className="text-2xl"><FaGoogle></FaGoogle></span>Google log in</button>
