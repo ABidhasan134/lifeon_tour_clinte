@@ -12,6 +12,8 @@ import PriveteRoute from "./priveteRoute";
 import GuidsDitails from "../shared/guidsProfile";
 import Allstroy from "../pages/Home/components/story/allstory.jsx/allstroy";
 import AllPackage from "../pages/Home/components/tabs/components/all package/allPackage";
+import Deshborde from "../layout/deshborde";
+import UserDashbord from "../pages/dashbordes/userDashbord/userDashbord";
 
   const router = createBrowserRouter([
     {
@@ -65,6 +67,16 @@ import AllPackage from "../pages/Home/components/tabs/components/all package/all
         }
       ]
     },
+    {
+      path: "/dashboard",
+      element: <Deshborde></Deshborde>,
+      children: [
+      {
+        path: "userprofile",
+        element: <UserDashbord></UserDashbord>
+      }
+    ]
+    }
   ]);
 
   export default router;

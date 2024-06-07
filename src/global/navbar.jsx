@@ -55,7 +55,7 @@ const Navbar = () => {
             <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52"> 
               <Link><button className='btn w-full' disabled>{user.displayName}</button></Link>
               <Link><button className='btn w-full' disabled>{user.email}</button></Link>
-              <Link><button className='btn w-full'>Dashbored</button></Link>
+              <Link to='/dashboard/userprofile'><button className='btn w-full'>Dashbored</button></Link>
             </ul>
           </div>
           <li>
