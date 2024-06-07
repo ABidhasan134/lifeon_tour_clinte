@@ -57,10 +57,10 @@ const Story = () => {
           <div className="modal-box bg-gray-800 text-white">
             <h3 className="font-bold text-lg">{blog.place_name}</h3>
             <h1>{blog.tour_type}</h1>
-            <h1>Author: {blog.person_name}</h1>
+            <h1>Author: {blog?.person_name || "member"}</h1>
             <h1>Year Written: {blog.year ? blog.year : '2024'}</h1>
             <hr className="border-1 border-gray-400 my-4 w-max-auto" />
-            <img src={blog.person_image} alt="" />
+            <img src={blog.image} alt="" />
             <hr className="border-1 border-gray-400 my-4 w-max-auto" />
             <p className="py-4">{blog.story}</p>
             <hr className="border-1 border-gray-400 my-4 w-max-auto" />

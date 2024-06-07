@@ -15,7 +15,7 @@ const GuidsDitails = () => {
             const res = await axiosPublic.get(`/guideDetails/${id}`);
             return res.data;
         },
-        enabled: !!id, // Only fetch if id is available
+        enabled: !!id, 
     });
 
     if (isLoading) {
