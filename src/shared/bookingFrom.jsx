@@ -31,7 +31,8 @@ const BookingForm = ({singleDetails}) => {
             tourist_image: user.photoURL,
             booking_date: startDate,
             package_type: singleDetails.tour_type,
-            tour_price: singleDetails.price
+            tour_price: singleDetails.price,
+            status:'review'
         };
         // console.log(completeData);
         Swal.fire({

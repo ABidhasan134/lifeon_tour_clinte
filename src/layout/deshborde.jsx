@@ -11,7 +11,7 @@ const Deshborde = () => {
             {
                user? <ul>
                 <li ><NavLink to="/dashboard/userprofile" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> My Profile</NavLink></li>                     
-                <li ><NavLink to="/" className='flex  items-center p-2 rounded-xl m-4'> My Bookings</NavLink></li>                
+                <li ><NavLink to="/dashboard/mybooking" className='flex  items-center p-2 rounded-xl m-4'> My Bookings</NavLink></li>                
                 <li ><NavLink to="/" className='flex  items-center p-2 rounded-xl m-4'> My WishList</NavLink></li>                
                 <li ><NavLink to="/" className='flex items-center p-2 rounded-xl m-4'> Request to Admin</NavLink></li>                
                 

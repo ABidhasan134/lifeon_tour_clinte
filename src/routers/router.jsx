@@ -14,6 +14,7 @@ import CardDetails from "../shared/cardDitails";
 import GuidsDitails from "../shared/guidsProfile";
 import ViewCetagory from "../shared/viewCetagory";
 import PriveteRoute from "./priveteRoute";
+import UserBooking from "../pages/dashbordes/userDashbord/userBooking.jsx/userBooking";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
         path: "userprofile",
         element: <PriveteRoute><UserProfile></UserProfile></PriveteRoute>,
       },
+      {
+        path: 'mybooking',
+        element: <PriveteRoute><UserBooking></UserBooking></PriveteRoute>
+      }
     ],
   },
 ]);
