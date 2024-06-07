@@ -15,6 +15,7 @@ import GuidsDitails from "../shared/guidsProfile";
 import ViewCetagory from "../shared/viewCetagory";
 import PriveteRoute from "./priveteRoute";
 import UserBooking from "../pages/dashbordes/userDashbord/userBooking.jsx/userBooking";
+import WishList from "../pages/dashbordes/userDashbord/userWishList/wishList";
 
 const router = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ const router = createBrowserRouter([
       {
         path: 'mybooking',
         element: <PriveteRoute><UserBooking></UserBooking></PriveteRoute>
+      },
+      {
+        path: "wishlist",
+        element: <PriveteRoute><WishList></WishList></PriveteRoute>
       }
     ],
   },
