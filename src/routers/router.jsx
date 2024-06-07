@@ -7,15 +7,16 @@ import LogOut from "../log/logOut";
 import Allstroy from "../pages/Home/components/story/allstory.jsx/allstroy";
 import AllPackage from "../pages/Home/components/tabs/components/all package/allPackage";
 import Home from "../pages/Home/home";
+import ReqForGuide from "../pages/dashbordes/userDashbord/reqForAdmin/reqForGuide";
+import UserBooking from "../pages/dashbordes/userDashbord/userBooking.jsx/userBooking";
 import UserProfile from "../pages/dashbordes/userDashbord/userProfile";
+import WishList from "../pages/dashbordes/userDashbord/userWishList/wishList";
 import Register from "../register/register";
 import Successful from "../register/successful";
 import CardDetails from "../shared/cardDitails";
 import GuidsDitails from "../shared/guidsProfile";
 import ViewCetagory from "../shared/viewCetagory";
 import PriveteRoute from "./priveteRoute";
-import UserBooking from "../pages/dashbordes/userDashbord/userBooking.jsx/userBooking";
-import WishList from "../pages/dashbordes/userDashbord/userWishList/wishList";
 
 const router = createBrowserRouter([
   {
@@ -84,19 +85,39 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Deshborde></Deshborde>,
     children: [
-      // normal user 
+      // normal user
       {
         path: "userprofile",
-        element: <PriveteRoute><UserProfile></UserProfile></PriveteRoute>,
+        element: (
+          <PriveteRoute>
+            <UserProfile></UserProfile>
+          </PriveteRoute>
+        ),
       },
       {
-        path: 'mybooking',
-        element: <PriveteRoute><UserBooking></UserBooking></PriveteRoute>
+        path: "mybooking",
+        element: (
+          <PriveteRoute>
+            <UserBooking></UserBooking>
+          </PriveteRoute>
+        ),
       },
       {
         path: "wishlist",
-        element: <PriveteRoute><WishList></WishList></PriveteRoute>
-      }
+        element: (
+          <PriveteRoute>
+            <WishList></WishList>
+          </PriveteRoute>
+        ),
+      },
+      {
+        path: "reqForAdmin",
+        element: (
+          <PriveteRoute>
+            <ReqForGuide></ReqForGuide>
+          </PriveteRoute>
+        ),
+      },
     ],
   },
 ]);
