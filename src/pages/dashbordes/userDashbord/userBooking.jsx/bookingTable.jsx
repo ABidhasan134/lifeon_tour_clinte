@@ -4,7 +4,7 @@ import BookingRow from './bookingRow';
 
 const BookingTable = () => {
     const [bookings,isLoading,refetch]=useBookings();
-    console.log(bookings)
+    // console.log(bookings)
   return (
     <table className="table  text-2xl">
       {/* head */}
