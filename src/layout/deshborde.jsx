@@ -29,7 +29,7 @@ const Deshborde = () => {
             {
               user && !isAdmin && isguide?<ul>
                 <li ><NavLink to="/dashboard/guideprofile" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> My Profile</NavLink></li>                     
-                <li ><NavLink to="/dashboard/mybooking" className='flex  items-center p-2 rounded-xl m-4'> My Bookings</NavLink></li>                
+                <li ><NavLink to="/dashboard/guideToures" className='flex  items-center p-2 rounded-xl m-4'> My Bookings</NavLink></li>                
               </ul>:<></>
             }
         </div>

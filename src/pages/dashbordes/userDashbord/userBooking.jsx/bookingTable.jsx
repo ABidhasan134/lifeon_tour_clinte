@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import useBookings from '../../../../hooks/useBookings';
 import BookingRow from './bookingRow';
+import { AuthContext } from '../../../../context/authProvider';
 
 const BookingTable = () => {
-    const [bookings,isLoading,refetch]=useBookings();
+    const {user}=useContext(AuthContext)
+    const [bookings,isLoading,refetch]=useBookings(user.email);
     // console.log(bookings)
   return (
     <table className="table  text-2xl">

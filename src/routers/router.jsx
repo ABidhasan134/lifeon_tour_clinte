@@ -18,6 +18,8 @@ import GuidsDitails from "../shared/guidsProfile";
 import ViewCetagory from "../shared/viewCetagory";
 import PriveteRoute from "./priveteRoute";
 import GuideProfile from "../pages/dashbordes/guideDashbord/guideProfile/guideProfile";
+import GuideToures from "../pages/dashbordes/guideDashbord/myAsstour/guideToure";
+import GuideProtection from "./guideProtection";
 
 const router = createBrowserRouter([
   {
@@ -122,7 +124,11 @@ const router = createBrowserRouter([
       // guide routes
       {
         path: 'guideprofile',
-        element: <PriveteRoute><GuideProfile></GuideProfile></PriveteRoute>
+        element: <GuideProtection><GuideProfile></GuideProfile></GuideProtection>
+      },
+      {
+        path: 'guideToures',
+        element: <GuideProtection><GuideToures></GuideToures></GuideProtection>
       }
     ],
   },

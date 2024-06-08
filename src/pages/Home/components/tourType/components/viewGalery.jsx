@@ -5,8 +5,7 @@ import LightGallery from 'lightgallery/react';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
-
-import "./viewgalery.css"
+import "./viewgalery.css";
 
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
@@ -19,15 +18,24 @@ const ViewGallery = ({ img }) => {
 
   return (
     <div className='mt-5'>
-        <TitleandSubtitels heading="Gallery full of Your's memory" subtitle="Witness the majestic wildlife of the Serengeti, from lions to wildebeest, against the backdrop of spectacular sunsets."></TitleandSubtitels>
+      <TitleandSubtitels 
+        heading="Gallery full of Your's memory" 
+        subtitle="Witness the majestic wildlife of the Serengeti, from lions to wildebeest, against the backdrop of spectacular sunsets."
+      />
       <LightGallery
         onInit={onInit}
         speed={500}
         plugins={[lgThumbnail, lgZoom]}
+        selector=".gallery-item"
       >
         <div className="gallery-grid">
           {img.map((image, index) => (
-            <a key={index} href={image} className="gallery-item">
+            <a 
+              key={index} 
+              href={image} 
+              className="gallery-item"
+              data-src={image} // Ensure data-src is set
+            >
               <img alt={`img${index + 1}`} src={image} />
             </a>
           ))}
