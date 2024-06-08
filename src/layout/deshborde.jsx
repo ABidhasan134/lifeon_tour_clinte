@@ -2,14 +2,22 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../context/authProvider'
 import { NavLink, Outlet } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
+import useAdmin from '../hooks/useAdmin';
+import useRoleGuide from '../hooks/useRoleGuide';
 
 const Deshborde = () => {
+  const [isAdmin] =useAdmin();
     const {user}=useContext(AuthContext);
+    const [isguide,isguideLoading]=useRoleGuide();
+    console.log(isAdmin,isguide);
+    if(isguideLoading){
+      return <p>Loading.....</p>
+    }
   return (
     <div className='flex bg-gray-600 text-white'>
         <div className='bg-gray-800 min-h-screen text-white'>
             {
-               user? <ul>
+               user && !isAdmin && !isguide ? <ul>
                 <li ><NavLink to="/dashboard/userprofile" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> My Profile</NavLink></li>                     
                 <li ><NavLink to="/dashboard/mybooking" className='flex  items-center p-2 rounded-xl m-4'> My Bookings</NavLink></li>                
                 <li ><NavLink to="/dashboard/wishlist" className='flex  items-center p-2 rounded-xl m-4'> My WishList</NavLink></li>                
@@ -17,6 +25,12 @@ const Deshborde = () => {
                 
       
             </ul>:<></>
+            }
+            {
+              user && !isAdmin && isguide?<ul>
+                <li ><NavLink to="/dashboard/guideprofile" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> My Profile</NavLink></li>                     
+                <li ><NavLink to="/dashboard/mybooking" className='flex  items-center p-2 rounded-xl m-4'> My Bookings</NavLink></li>                
+              </ul>:<></>
             }
         </div>
         <div className='flex-1 p-6'>

@@ -17,6 +17,7 @@ import CardDetails from "../shared/cardDitails";
 import GuidsDitails from "../shared/guidsProfile";
 import ViewCetagory from "../shared/viewCetagory";
 import PriveteRoute from "./priveteRoute";
+import GuideProfile from "../pages/dashbordes/guideDashbord/guideProfile/guideProfile";
 
 const router = createBrowserRouter([
   {
@@ -118,6 +119,11 @@ const router = createBrowserRouter([
           </PriveteRoute>
         ),
       },
+      // guide routes
+      {
+        path: 'guideprofile',
+        element: <PriveteRoute><GuideProfile></GuideProfile></PriveteRoute>
+      }
     ],
   },
 ]);

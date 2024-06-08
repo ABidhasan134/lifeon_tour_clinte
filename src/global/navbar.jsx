@@ -2,9 +2,12 @@ import React, { useContext } from 'react'
 import {  Link, NavLink } from 'react-router-dom';
 import "./style.css"
 import { AuthContext } from '../context/authProvider';
+import useRoleGuide from '../hooks/useRoleGuide';
+import useAdmin from '../hooks/useAdmin';
 const Navbar = () => {
   const {user,logOut}=useContext(AuthContext);
-
+  const [isguide]=useRoleGuide();
+  const [isAdmin]=useAdmin();
   const handleCurrentUserLogOut = () => {
     logOut();
   };
@@ -55,7 +58,16 @@ const Navbar = () => {
             <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52"> 
               <Link><button className='btn w-full' disabled>{user.displayName}</button></Link>
               <Link><button className='btn w-full' disabled>{user.email}</button></Link>
-              <Link to='/dashboard/userprofile'><button className='btn w-full'>Dashbored</button></Link>
+              {
+                user && !isguide && !isAdmin?
+                <Link to='/dashboard/userprofile'><button className='btn w-full'>Dashbored</button></Link>:
+                <></>
+              }
+              {
+                user && isguide && !isAdmin?
+                <Link to='/dashboard/guideprofile'><button className='btn w-full'>Dashbored</button></Link>:
+                <></>
+              }
             </ul>
           </div>
           <li>

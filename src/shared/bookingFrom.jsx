@@ -5,10 +5,12 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import useAxiousSequer from '../hooks/useAxiousSequer';
 import Swal from 'sweetalert2'
+import useGuide from '../hooks/useGuide';
 
 
 const BookingForm = ({singleDetails}) => {
     const [startDate, setStartDate] = useState(new Date());
+    const [Guides]=useGuide();
   
     const { user } = useContext(AuthContext);
     const { register, handleSubmit, setValue,reset, formState: { errors } } = useForm();
@@ -117,10 +119,11 @@ const BookingForm = ({singleDetails}) => {
                             {...register("guide_name", { required: true })}
                             className="input input-bordered w-full"
                         >
-                            <option value="">Select Guide</option>
-                            <option value="Hasan Mia">Hasan Mia</option>
-                            <option value="Dirruba Mohona">Dirruba Mohona</option>
-                            <option value="Abid Hasan">Abid Hasan</option>
+                            
+                            {
+                                Guides.map((guide)=>{
+                                    return <option value={guide.name}>{guide.name}</option>})
+                            }
                         </select>
                         {errors.guide_name && <span className="text-red-500">Guide name is required</span>}
                     </div>
