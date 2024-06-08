@@ -68,6 +68,11 @@ const Navbar = () => {
                 <Link to='/dashboard/guideprofile'><button className='btn w-full'>Dashbored</button></Link>:
                 <></>
               }
+               {
+                user && !isguide && isAdmin?
+                <Link to='/dashboard/adminprofile'><button className='btn w-full'>Dashbored</button></Link>:
+                <></>
+              }
             </ul>
           </div>
           <li>

@@ -20,6 +20,8 @@ import PriveteRoute from "./priveteRoute";
 import GuideProfile from "../pages/dashbordes/guideDashbord/guideProfile/guideProfile";
 import GuideToures from "../pages/dashbordes/guideDashbord/myAsstour/guideToure";
 import GuideProtection from "./guideProtection";
+import AdminRoute from "./adminRoute";
+import AdminProfile from "../pages/dashbordes/amdinDashbord/adminProfile";
 
 const router = createBrowserRouter([
   {
@@ -129,6 +131,11 @@ const router = createBrowserRouter([
       {
         path: 'guideToures',
         element: <GuideProtection><GuideToures></GuideToures></GuideProtection>
+      },
+      // admin routes
+      {
+        path: "adminprofile",
+        element: <AdminRoute><AdminProfile></AdminProfile></AdminRoute>
       }
     ],
   },

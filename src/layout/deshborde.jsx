@@ -6,11 +6,12 @@ import useAdmin from '../hooks/useAdmin';
 import useRoleGuide from '../hooks/useRoleGuide';
 
 const Deshborde = () => {
-  const [isAdmin] =useAdmin();
-    const {user}=useContext(AuthContext);
+  
+    const {user,loading}=useContext(AuthContext);
     const [isguide,isguideLoading]=useRoleGuide();
+    const [isAdmin,isAdminLoading]=useAdmin()
     console.log(isAdmin,isguide);
-    if(isguideLoading){
+    if(isguideLoading || isAdminLoading || loading){
       return <p>Loading.....</p>
     }
   return (
@@ -31,6 +32,13 @@ const Deshborde = () => {
                 <li ><NavLink to="/dashboard/guideprofile" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> My Profile</NavLink></li>                     
                 <li ><NavLink to="/dashboard/guideToures" className='flex  items-center p-2 rounded-xl m-4'> My Bookings</NavLink></li>                
               </ul>:<></>
+            }
+            {
+              user && isAdmin && !isguide?<ul>
+              <li ><NavLink to="/dashboard/adminprofile" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> My Profile</NavLink></li>                     
+              <li ><NavLink to="/" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> Add Package </NavLink></li>                     
+              <li ><NavLink to="/" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> Manage users </NavLink></li>                     
+            </ul>:<></>
             }
         </div>
         <div className='flex-1 p-6'>
