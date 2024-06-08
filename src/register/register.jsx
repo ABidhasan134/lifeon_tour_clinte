@@ -54,7 +54,7 @@ const Register = () => {
           toast("User created successfully");
           setUser({ displayName: userName, photoURL: userPhotoUrl });
           const userInfo = { user_name: userName, user_email: userEmail, role: 'user' };
-          axiousPublic.put(`/users/${userEmail}`, userInfo)
+          axiousPublic.put(`/guides/${userEmail}`, userInfo)
             .then((res) => {
               console.log(res.data);
             });
@@ -83,7 +83,7 @@ const Register = () => {
         toast("Registered successfully with Google");
         setUser({ displayName: user.displayName, photoURL: user.photoURL });
         const userInfo = { user_name: user.displayName, user_email: user.email, role: 'user' };
-        axiousPublic.put(`/users/${user.email}`, userInfo)
+        axiousPublic.put(`/guides/${user.email}`, userInfo)
           .then((res) => {
             console.log(res.data);
           });

@@ -73,7 +73,7 @@ const LogIn = () => {
         const userInfo = { user_name: user.displayName, user_email: email || "example@gmail.com", role: 'user' };
 
         toast("Login successful with GitHub");
-        axiousPublic.put(`/users/${email}`, userInfo)
+        axiousPublic.put(`/guides/${email}`, userInfo)
           .then((res) => {
             console.log(res.data);
           });
@@ -96,7 +96,7 @@ const LogIn = () => {
         toast("Login successful with Google");
         console.log(user);
         const userInfo = { user_name: user.displayName, user_email: user.email, role: 'user' };
-        axiousPublic.put(`/users/${user.email}`, userInfo)
+        axiousPublic.put(`/guides/${user.email}`, userInfo)
           .then((res) => {
             console.log(res.data);
           });
