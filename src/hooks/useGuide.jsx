@@ -7,14 +7,14 @@ import { AuthContext } from '../context/authProvider';
 const useGuide = () => {
     const axiousPublic=useAxiousPublic();
     const {user}=useContext(AuthContext);
-    const {data: Guides=[]}=useQuery({
+    const {data: Guides=[],refetch}=useQuery({
         queryKey: 'Guides',
         queryFn: async()=>{
             const res=await axiousPublic.get(`/guides`);
             return res.data
         }
       })
-      return [Guides]
+      return [Guides,refetch]
 }
 
 export default useGuide;

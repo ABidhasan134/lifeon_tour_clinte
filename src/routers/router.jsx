@@ -23,6 +23,7 @@ import GuideProtection from "./guideProtection";
 import AdminRoute from "./adminRoute";
 import AdminProfile from "../pages/dashbordes/amdinDashbord/adminProfile";
 import AddPackeges from "../pages/dashbordes/amdinDashbord/addPackages/addPackeges";
+import ManageUser from "../pages/dashbordes/amdinDashbord/manageUser/manageUser";
 
 const router = createBrowserRouter([
   {
@@ -141,6 +142,10 @@ const router = createBrowserRouter([
       {
         path: "addPackage",
         element: <AdminRoute><AddPackeges></AddPackeges></AdminRoute>
+      },
+      {
+        path: "manageUser",
+        element: <AdminRoute><ManageUser></ManageUser></AdminRoute>
       }
     ],
   },
