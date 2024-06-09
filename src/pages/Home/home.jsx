@@ -6,7 +6,7 @@ import Story from './components/story/story'
 
 const Home = () => {
   return (
-    <div>
+    <div className='m-2'>
       <Bannar></Bannar>
       <TabsOwn></TabsOwn>
       <TourType></TourType>

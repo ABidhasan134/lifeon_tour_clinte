@@ -1,11 +1,11 @@
 import React from 'react'
 import useAxiousSequer from '../../../../hooks/useAxiousSequer';
 import Swal from 'sweetalert2'
-import useBookings from '../../../../hooks/useBookings';
 
-const BookingRow = ({ tour, index }) => {
+
+const BookingRow = ({ tour, index,refetch }) => {
     const axiosSequer=useAxiousSequer();
-    const [,,refetch]=useBookings()
+    
     const formatDate = (dateString) => {
         if (!dateString) return '';
         const date = new Date(dateString);
@@ -44,8 +44,8 @@ const BookingRow = ({ tour, index }) => {
             <th>{index + 1}</th>
             <td>{tour?.package_type || "Day tour"}</td>
             <td>{tour?.guide_name}</td>
-            <td>{formatDate(tour?.booking_date)}</td>
-            <td>{tour?.tour_price}</td>
+            <td className='hidden md:table-cell'>{formatDate(tour?.booking_date)}</td>
+            <td className='hidden md:table-cell'>{tour?.tour_price}</td>
             <td>{tour?.status}</td>
             <td>
                 {tour.status === 'review' ? 

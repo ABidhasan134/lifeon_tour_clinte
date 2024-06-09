@@ -15,15 +15,15 @@ const BookingTable = () => {
           <th></th>
           <th>Package Name</th>
           <th>Guide Name</th>
-          <th>Date</th>
-          <th>Price</th>
+          <th className='hidden md:table-cell'>Date</th>
+          <th className='hidden md:table-cell'>Price</th>
           <th>status</th>
         </tr>
       </thead>
       <tbody>
       {
         bookings.map((item,index)=>{
-          return  <BookingRow tour={item} key={item._id} index={index}></BookingRow>
+          return  <BookingRow tour={item} key={item._id} index={index}refetch={refetch}></BookingRow>
 
         })
       }

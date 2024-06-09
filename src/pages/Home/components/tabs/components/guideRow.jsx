@@ -6,8 +6,8 @@ const GuideRow = ({guide,index}) => {
     <tr>
     <th>{index+1}</th>
     <td>{guide.name}</td>
-    <td>{guide.email}</td>
-    <td>{guide.availability}</td>
+    <td className='hidden md:table-cell'>{guide.email}</td>
+    <td className='hidden md:table-cell'>{guide.availability}</td>
     <td><Link to={`/guideDetails/${guide._id}`}><button className='btn btn-outline'>profile</button></Link></td>
     
   </tr>

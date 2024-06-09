@@ -6,15 +6,15 @@ const OurGurids = () => {
     const [Guides]=useGuide();
     // console.log(Guides);
   return (
-    <div className="overflow-x-auto my-16">
+    <div className="overflow-x-auto my-16 snap-x">
   <table className="table table-zebra text-2xl">
     {/* head */}
-    <thead className='text-2xl text-sky-700'>
+    <thead className='text-2xl text-sky-700 '>
       <tr>
         <th></th>
         <th>Name</th>
-        <th>email</th>
-        <th>availability</th>
+        <th className='hidden md:table-cell'>email</th>
+        <th className='hidden md:table-cell'>availability</th>
         <th>view profile</th>
       </tr>
     </thead>

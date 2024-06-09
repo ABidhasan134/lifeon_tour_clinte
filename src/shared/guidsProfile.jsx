@@ -33,7 +33,7 @@ const GuidsDitails = () => {
   <div className="hero-content flex-col lg:flex-row">
 
     <div className='grid gap-1'>
-      <h1 className="text-5xl text-center font-bold sm:shadow-md shadow-sm sm:p-4 p-1 bg-sky-50 rounded-3xl text-sky-600">{guide.name}</h1>
+      <h1 className="md:text-5xl text-2xl text-center font-bold sm:shadow-md shadow-sm sm:p-4 p-1 bg-sky-50 rounded-3xl text-sky-600">{guide.name}</h1>
       <p >Email: <span className='font-semibold'>{guide.email}</span></p>
       <p className="">Guide id: {guide._id.slice(0,5) || "365aj"}</p>
       <p className='text-xl font-semibold'>phone number: {guide?.phoneNumber||'71***550100'}</p>

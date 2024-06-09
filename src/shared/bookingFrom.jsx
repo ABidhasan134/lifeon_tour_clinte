@@ -157,7 +157,7 @@ const BookingForm = ({ singleDetails }) => {
               <span className="label-text">Price</span>
             </label>
             <input
-              {...register("tour_price", { required: true })}
+              {...register("tour_price")}
               type="number"
               placeholder={singleDetails.price}
               className="input input-bordered"

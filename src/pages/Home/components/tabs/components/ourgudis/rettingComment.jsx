@@ -80,7 +80,7 @@ const RettingComment = ({guide}) => {
   return (
     <div >
       <p className='text-xl font-semibold '> <span>Give me ratting and Comment:</span></p>
-        <div className="flex items-center ">
+        <div className="md:flex items-center grid">
         <Box
           sx={{
             width: 400,
@@ -107,12 +107,12 @@ const RettingComment = ({guide}) => {
           )}
         </Box>
         
-      <form className="flex items-center gap-2" onSubmit={handelCommentPost}>
+      <form className="flex items-center md:gap-2" onSubmit={handelCommentPost}>
       <input
               type="text"
               name="comment"
               placeholder="comment"
-              className=" mt-2 input input-bordered input-accent w-full"
+              className=" mt-2 ml-1 input input-bordered input-accent w-full"
               required
             />
         <button className="btn btn-outline">Commit</button>
