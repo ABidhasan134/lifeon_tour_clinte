@@ -22,6 +22,7 @@ import GuideToures from "../pages/dashbordes/guideDashbord/myAsstour/guideToure"
 import GuideProtection from "./guideProtection";
 import AdminRoute from "./adminRoute";
 import AdminProfile from "../pages/dashbordes/amdinDashbord/adminProfile";
+import AddPackeges from "../pages/dashbordes/amdinDashbord/addPackages/addPackeges";
 
 const router = createBrowserRouter([
   {
@@ -136,6 +137,10 @@ const router = createBrowserRouter([
       {
         path: "adminprofile",
         element: <AdminRoute><AdminProfile></AdminProfile></AdminRoute>
+      },
+      {
+        path: "addPackage",
+        element: <AdminRoute><AddPackeges></AddPackeges></AdminRoute>
       }
     ],
   },

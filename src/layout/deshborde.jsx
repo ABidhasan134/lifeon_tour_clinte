@@ -36,7 +36,7 @@ const Deshborde = () => {
             {
               user && isAdmin && !isguide?<ul>
               <li ><NavLink to="/dashboard/adminprofile" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> My Profile</NavLink></li>                     
-              <li ><NavLink to="/" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> Add Package </NavLink></li>                     
+              <li ><NavLink to="/dashboard/addPackage" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> Add Package </NavLink></li>                     
               <li ><NavLink to="/" className='flex   items-center p-2 rounded-xl m-4'><FaUser></FaUser> Manage users </NavLink></li>                     
             </ul>:<></>
             }
