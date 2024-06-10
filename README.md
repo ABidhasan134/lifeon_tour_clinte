@@ -12,4 +12,4 @@
 ---------Admin info----------
 email: abid@gamil.com
 password: 123456aA
-live site: 
+live site: https://life-on-tour.web.app
