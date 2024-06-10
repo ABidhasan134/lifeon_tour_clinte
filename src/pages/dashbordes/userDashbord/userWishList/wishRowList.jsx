@@ -12,7 +12,7 @@ const WishRowList = ({ wish, index,refetch }) => {
     };
 
     const handelDelete=(id)=>{
-        console.log(id)
+        // console.log(id)
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -25,7 +25,7 @@ const WishRowList = ({ wish, index,refetch }) => {
             if (result.isConfirmed) {
                 axiosSequer.delete(`/wishlist/${id}`)
                 .then((result)=>{
-                    console.log(result.data);
+                    // console.log(result.data);
                     if(result.data.deletedCount){
                         refetch();
                         Swal.fire({

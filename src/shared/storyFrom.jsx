@@ -40,10 +40,10 @@ const StoryForm = () => {
                     tour_type: data.tour_type,
                     image: res.data.data.url
                 };
-                console.log('New story:', newStory);
+                // console.log('New story:', newStory);
                  axiosSequer.post('/storys',newStory)
                  .then((res)=>{
-                    console.log(res.data);
+                    // console.log(res.data);
                     if(res.data.insertedId){
                         Swal.fire({
                             position: "top-end",
@@ -58,7 +58,7 @@ const StoryForm = () => {
 
             }
         } catch (error) {
-            console.error("Error uploading image", error);
+            // console.error("Error uploading image", error);
         }
     };
 

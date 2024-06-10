@@ -36,7 +36,7 @@ const ReqForGuide = () => {
     // console.log(newGuide);
     axiousSequer.put(`/guides/${user.email}`, newGuide)
     .then((res)=>{
-      console.log(res.data)
+    //   console.log(res.data)
      
     if(res.data.upsertedCount>0 || res.data.modifiedCount){
       Swal.fire({

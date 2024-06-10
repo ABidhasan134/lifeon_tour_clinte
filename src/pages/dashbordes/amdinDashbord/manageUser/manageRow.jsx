@@ -8,7 +8,7 @@ const ManageRow = ({tour,index,refetch}) => {
     
     
    const handelStatus=(id,role)=>{
-    console.log(id,role);
+    // console.log(id,role);
     const info={
       role: role,
       status: 'ok'
@@ -25,7 +25,7 @@ const ManageRow = ({tour,index,refetch}) => {
       if (result.isConfirmed) {
         axiosSequer.patch(`/alluser/${id}`,info)
           .then((result)=>{
-              console.log(result.data);
+              // console.log(result.data);
               if(result.data.modifiedCount){
                   refetch();
                   Swal.fire({

@@ -56,18 +56,18 @@ const Register = () => {
           const userInfo = { user_name: userName, user_email: userEmail, role: 'user' };
           axiousPublic.put(`/guides/${userEmail}`, userInfo)
             .then((res) => {
-              console.log(res.data);
+              // console.log(res.data);
             });
           setLoading(true);
           e.target.reset();
           navigate("/successregester");
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
         });
       })
       .catch((error) => {
-        console.log(error.message);
+        // console.log(error.message);
         toast("You already have an account, please log in");
       });
   };
@@ -85,14 +85,14 @@ const Register = () => {
         const userInfo = { user_name: user.displayName, user_email: user.email, role: 'user' };
         axiousPublic.put(`/guides/${user.email}`, userInfo)
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
           });
         setTimeout(() => {
           navigate("/");
         }, 3000);
       })
       .catch((error) => {
-        console.log("error", error.message);
+        // console.log("error", error.message);
       });
   };
 

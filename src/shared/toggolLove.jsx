@@ -22,7 +22,7 @@ const ToggolLove = ({ ourPackage }) => {
                 user_email:user.email                       
             }
             const res = await axiosSequer.post('/wishlist', newWish);
-            console.log(res.data);
+            // console.log(res.data);
             if(res.data.insertedId){
                 Swal.fire({
                     position: "top-end",

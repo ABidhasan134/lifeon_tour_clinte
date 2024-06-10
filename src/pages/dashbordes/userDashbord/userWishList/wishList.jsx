@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 
 const WishList = () => {
     const [wishlist,isLoading,refetch]=useWishList();
-    console.log(wishlist)
+    // console.log(wishlist)
   return (
     <div className="overflow-x-auto my-16">
       <Helmet><title>My Wish's</title></Helmet>

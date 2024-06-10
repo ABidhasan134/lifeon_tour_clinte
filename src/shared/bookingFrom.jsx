@@ -56,7 +56,7 @@ const BookingForm = ({ singleDetails }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosSequer.post("/mybooking", completeData).then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           if (res.data.insertedId) {
             Swal.fire({
               title: "Booking successfully",

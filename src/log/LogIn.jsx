@@ -75,7 +75,7 @@ const LogIn = () => {
         toast("Login successful with GitHub");
         axiousPublic.put(`/guides/${email}`, userInfo)
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
           });
         setTimeout(() => {
           navigate(logLocation?.state ? logLocation.state : "/");
@@ -94,11 +94,11 @@ const LogIn = () => {
         const user = result.user;
         // setPerson(user);
         toast("Login successful with Google");
-        console.log(user);
+        // console.log(user);
         const userInfo = { user_name: user.displayName, user_email: user.email, role: 'user' };
         axiousPublic.put(`/guides/${user.email}`, userInfo)
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
           });
         setTimeout(() => {
           navigate(logLocation?.state?logLocation.state:"/");

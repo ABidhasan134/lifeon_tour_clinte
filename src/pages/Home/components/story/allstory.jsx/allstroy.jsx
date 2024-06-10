@@ -6,7 +6,7 @@ import useStory from '../../../../../hooks/useStorys';
 
 const Allstroy = () => {
   const [storys, isLoading, refetch] = useStory();
-  console.log(storys);
+  // console.log(storys);
 
   if (isLoading) {
     return <div>Loading...</div>;

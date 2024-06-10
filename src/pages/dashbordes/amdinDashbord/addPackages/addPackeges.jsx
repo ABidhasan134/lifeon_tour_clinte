@@ -8,7 +8,7 @@ const AddPackages = () => {
     const axiosSequer=useAxiousSequer()
   const { register, handleSubmit,reset, formState: { errors } } = useForm();
   const onSubmit = data => {
-    console.log(data);
+    // console.log(data);
     const info={
         tour_type: data.tour_type,
           popular_destinations: [data.popular_destinations,data.popular_destinations2],
@@ -34,7 +34,7 @@ const AddPackages = () => {
         if (result.isConfirmed) {
           axiosSequer.post("/ourPackages", info)
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             if (res.data.insertedId) {
               Swal.fire({
                 title: "Add successfully",

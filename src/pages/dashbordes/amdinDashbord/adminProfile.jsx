@@ -14,7 +14,7 @@ const AdminProfile = () => {
       return res.data;
     },
   });
-  console.log(admindetails)
+  // console.log(admindetails)
   return (
     <div className="container mx-auto text-black">
       <Helmet><title>{user.displayName} profile</title></Helmet>

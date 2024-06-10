@@ -3,7 +3,7 @@ import useAxiousSequer from './useAxiousSequer';
 import { useQuery } from '@tanstack/react-query';
 
 const useBookings = (email) => {
-  console.log(email);
+  // console.log(email);
   const axiousSequere=useAxiousSequer();
 
     const {data: bookings=[],isLoading,refetch}=useQuery({

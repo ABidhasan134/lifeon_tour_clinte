@@ -35,7 +35,7 @@ const ManageUser = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error searching users:", error);
+        // console.error("Error searching users:", error);
         setLoading(false);
       });
   };
@@ -52,7 +52,7 @@ const ManageUser = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error sorting users:", error);
+        // console.error("Error sorting users:", error);
         setLoading(false);
       });
   };

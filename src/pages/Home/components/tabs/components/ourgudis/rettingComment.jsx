@@ -40,7 +40,7 @@ const RettingComment = ({guide}) => {
     // console.log(info); // This will log the updated value immediately
     axiosSequer.put(`/rattingComment/${tourist_email}`,info)
     .then((res)=>{
-      console.log(res.data); 
+      // console.log(res.data); 
       if(res.data.upsertedCount>0 || res.data.modifiedCount>0){
         Swal.fire({
           position: "top-end",
@@ -65,7 +65,7 @@ const RettingComment = ({guide}) => {
     // console.log(info);
     axiosSequer.put(`/rattingComment/${tourist_email}`,info)
     .then((res)=>{
-      console.log(res.data); 
+      // console.log(res.data); 
       if(res.data.upsertedCount>0 || res.data.modifiedCount>0){
         Swal.fire({
           position: "top-end",
