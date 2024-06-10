@@ -24,7 +24,7 @@ const Deshborde = () => {
       <span className="loading loading-bars loading-lg"></span></div>
     }
   return (
-    <div className='container mx-auto flex bg-gray-600 text-white'>
+    <div className='flex bg-gray-600 text-white'>
         <div className='bg-gray-800 min-h-screen text-white'>
             {
                user && !isAdmin && !isguide ? <ul>

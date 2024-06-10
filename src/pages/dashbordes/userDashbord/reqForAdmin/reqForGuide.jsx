@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import TitleandSubtitels from '../../../../shared/titleandSubtitels';
 import useAxiousSequer from '../../../../hooks/useAxiousSequer';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 
 const ReqForGuide = () => {
   const {user}=useContext(AuthContext);
@@ -55,6 +56,7 @@ const ReqForGuide = () => {
   };
   return (
     <div className="mx-5">
+        <Helmet><title>Apply as Admin</title></Helmet>
      <TitleandSubtitels heading="Requst From" subtitle='To Apply for guide your have to fill this from'></TitleandSubtitels>
                 <form className="card-body flex justify-center" onSubmit={handleSubmit(onSubmit)}>
                   {/* 1st row */}

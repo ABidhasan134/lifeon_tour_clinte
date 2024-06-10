@@ -1,12 +1,14 @@
 import React from 'react'
 import WishRowList from './wishRowList'
 import useWishList from '../../../../hooks/useWishList'
+import { Helmet } from 'react-helmet-async';
 
 const WishList = () => {
     const [wishlist,isLoading,refetch]=useWishList();
     console.log(wishlist)
   return (
     <div className="overflow-x-auto my-16">
+      <Helmet><title>My Wish's</title></Helmet>
   <table className="table  text-2xl">
     {/* head */}
     <thead className='text-2xl text-white'>

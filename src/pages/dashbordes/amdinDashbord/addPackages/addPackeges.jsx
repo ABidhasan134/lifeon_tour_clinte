@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiousSequer from '../../../../hooks/useAxiousSequer';
+import { Helmet } from 'react-helmet-async';
 
 const AddPackages = () => {
     const axiosSequer=useAxiousSequer()
@@ -50,6 +51,9 @@ const AddPackages = () => {
 
   return (
     <div className="container mx-auto">
+      <Helmet>
+        <title>Add New Packege</title>
+      </Helmet>
       <form onSubmit={handleSubmit(onSubmit)} className="card-body flex flex-col items-center">
         {/* 1st row */}
         <div className="flex gap-8 w-full mb-4">

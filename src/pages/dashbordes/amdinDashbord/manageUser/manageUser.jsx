@@ -3,6 +3,7 @@ import ManageRow from "./manageRow";
 import useAllUser from "../../../../hooks/useAllUser";
 import useAxiousSequer from "../../../../hooks/useAxiousSequer";
 import Select from "react-select";
+import { Helmet } from "react-helmet-async";
 
 const ManageUser = () => {
   const [allUser, refetch] = useAllUser();
@@ -58,6 +59,9 @@ const ManageUser = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Manage user</title>
+      </Helmet>
       <Select
         options={options}
         className="text-black mb-4 w-[50%]"

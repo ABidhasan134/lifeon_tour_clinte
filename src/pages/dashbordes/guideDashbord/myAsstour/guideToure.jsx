@@ -3,6 +3,7 @@ import { AuthContext } from '../../../../context/authProvider'
 import useAxiousSequer from '../../../../hooks/useAxiousSequer';
 import { useQuery } from '@tanstack/react-query';
 import GuideToureRow from './guideToureRow';
+import { Helmet } from 'react-helmet-async';
 
 
 const GuideToures = () => {
@@ -22,6 +23,7 @@ const GuideToures = () => {
     }
   return (
     <table className="table  text-2xl">
+      <Helmet><title>My toure</title></Helmet>
       {/* head */}
       <thead className='text-2xl text-white'>
         <tr>

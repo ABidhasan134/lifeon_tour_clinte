@@ -3,6 +3,7 @@ import Bakground from '../../../../public/img/cool-background.png'
 import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../../../context/authProvider';
 import useAxiousSequer from '../../../hooks/useAxiousSequer';
+import { Helmet } from 'react-helmet-async';
 const AdminProfile = () => {
   const {user}=useContext(AuthContext)
   const axiousPublic=useAxiousSequer();
@@ -16,6 +17,7 @@ const AdminProfile = () => {
   console.log(admindetails)
   return (
     <div className="container mx-auto text-black">
+      <Helmet><title>{user.displayName} profile</title></Helmet>
        <div
         className="hero mt-2 min-h-[80vh] flex justify-center  gap-10"
         style={{ backgroundImage: `url(${Bakground})` }}

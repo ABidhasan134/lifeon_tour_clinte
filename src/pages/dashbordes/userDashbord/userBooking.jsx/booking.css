@@ -1,0 +1,30 @@
+.confetti-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .congrats-message {
+    font-size: 2rem;
+    color: #ff718d;
+    margin-bottom: 10px;
+  }
+  
+  .apply-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #29cdff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

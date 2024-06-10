@@ -7,6 +7,7 @@ import useAxiousSequer from "../../../../hooks/useAxiousSequer";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import TitleandSubtitle from '../../../../shared/titleandSubtitels'
+import { Helmet } from "react-helmet-async";
 
 const GuideProfile = () => {
   const axiousPublic = useAxiousPublic();
@@ -65,6 +66,7 @@ const GuideProfile = () => {
 
   return (
     <div className="container mx-auto text-black">
+      <Helmet><title>{user.displayName} profile</title></Helmet>
       <div
         className="hero mt-2 min-h-[80vh] flex justify-center gap-10"
         style={{ backgroundImage: `url(${Bakground})` }}
