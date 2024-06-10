@@ -1,8 +1,15 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+----------------Life On tour------------
+1. User can book package and get on dashboard.
+2. Also user have to be sequer and verify
+3. user can aplly as admin
+4. Tour guide can add more guide
+5. user can delete from wish list and also from booking (payments are not allowed)
+6. Admin can make guide and admin also.
+7. Admin can add new package.
+8. responsib for mobile, tablet and pc
+9. All type of user can write story and shera it on facebook
+10. Admin can filter and search user
+---------Admin info----------
+email: abid@gamil.com
+password: 123456aA
+live site: 

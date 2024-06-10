@@ -70,7 +70,7 @@ const RettingComment = ({guide}) => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: `you rate ${guide.name} `,
+          title: `you rate or comment ${guide.name} `,
           showConfirmButton: false,
           timer: 1500
         });
